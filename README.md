@@ -64,8 +64,8 @@ Este challenge me permitió mejorar:
 
 ## 🔗 Contacto
 
-• 💼 LinkedIn: [TU_LINKEDIN]  
-• 📧 Email: [TU_EMAIL]
+• 💼 LinkedIn: (https://www.linkedin.com/in/marcos-martin-dominguez-118801297/)
+• 📧 Email: marcos.martdomg@gmail.com
 
 ---
 
