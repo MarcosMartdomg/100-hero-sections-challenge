@@ -1,0 +1,388 @@
+:root {
+    --color-white: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.7);
+    --color-accent: #ff4d00; /* Martian orange hint if needed */
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* No native scroll */
+}
+
+body {
+    background-color: #000;
+    color: var(--color-white);
+    font-family: var(--font-main);
+}
+
+.missions-slider {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.missions-track {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Cinematic Overlay */
+.mission-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0) 70%),
+        linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 40%);
+    z-index: 1;
+}
+
+/* --- Header (Fixed) --- */
+.mars-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    padding: 0 clamp(48px, 7vw, 120px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; /* High z-index to stay above sections */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, transparent 100%);
+}
+
+.logo img {
+    width: 210px; /* Increased by ~50% from original small look */
+    height: auto;
+    filter: brightness(1.5);
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: #fff;
+}
+
+/* --- Content --- */
+.mars-content {
+    position: absolute;
+    left: clamp(48px, 7vw, 120px);
+    bottom: 240px;
+    z-index: 5;
+    max-width: 520px;
+}
+
+.meta-tabs {
+    display: inline-flex;
+    gap: 24px;
+    position: relative;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+}
+
+.meta-tabs::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.meta-tabs span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-white);
+    opacity: 0.55;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.meta-tabs span.active {
+    opacity: 1;
+}
+
+.meta-tabs span.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    z-index: 2;
+}
+
+.mission-tag {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.mars-title {
+    font-family: Helvetica, Arial, sans-serif; /* Cleaner geometric look */
+    font-size: clamp(110px, 12vw, 180px);
+    font-weight: 600; /* Reduced from 900 for a cleaner look */
+    line-height: 0.8;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+}
+
+.mars-paragraph {
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--color-text-muted);
+    max-width: 520px;
+    opacity: 0.8;
+}
+
+.desktop-only {
+    display: inline;
+    margin: 0 0.5rem;
+    color: var(--color-white);
+}
+
+/* --- Vertical Arrows --- */
+.vertical-arrows {
+    position: absolute;
+    right: clamp(48px, 7vw, 120px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 10;
+}
+
+.v-arrow {
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid rgba(255, 255, 255, 0.95);
+    border-right: 2px solid rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    opacity: 0.95;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+    transition: opacity 0.3s;
+}
+
+.v-arrow:hover {
+    opacity: 1;
+}
+
+.v-arrow.disabled {
+    opacity: 0.25;
+    pointer-events: none;
+}
+
+.v-arrow.up { transform: rotate(-45deg); }
+.v-arrow.down { transform: rotate(135deg); }
+
+/* --- Mission Counter --- */
+.mission-counter {
+    position: absolute;
+    right: clamp(48px, 7vw, 120px);
+    bottom: 165px;
+    text-align: right;
+    color: #fff;
+    z-index: 3;
+}
+
+.mission-counter .count {
+    font-size: clamp(38px, 4vw, 56px);
+    font-weight: 300;
+    line-height: 1;
+}
+
+.mission-counter .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.7;
+}
+
+/* --- Explore CTA --- */
+.explore-cta {
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    font-size: 12px;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.explore-cta a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: 700;
+    letter-spacing: inherit;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.chevron {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+/* --- Stats Bar --- */
+.mars-stats {
+    position: absolute;
+    bottom: 0;
+    left: clamp(48px, 7vw, 120px);
+    right: clamp(48px, 7vw, 120px);
+    height: 150px;
+    padding-top: 28px;
+    z-index: 10;
+}
+
+.stats-container {
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+}
+
+.stat-col {
+    text-align: center;
+    position: relative;
+}
+
+.stat-col:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 25%;
+    height: 50%;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-value {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.stat-label {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .mars-content { bottom: 180px; }
+    .mars-stats { height: 100px; }
+}
+
+@media (max-width: 768px) {
+    body { overflow-y: auto; } /* Allow scroll on mobile if content is tight */
+    
+    .hero-mars { height: auto; min-height: 100vh; }
+    
+    .mars-header { height: 70px; padding: 0 2rem; }
+    
+    .mars-content {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        padding: 120px 2rem 100px;
+        max-width: 100%;
+    }
+    
+    .mars-title { font-size: 80px; }
+    
+    .explore-cta {
+        position: relative;
+        bottom: 40px;
+        left: 0;
+        transform: none;
+        padding-left: 2rem;
+    }
+    
+    .mars-stats {
+        position: relative;
+        height: auto;
+        padding: 0 2rem 40px;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding-top: 2rem;
+    }
+    
+    .stat-col { height: auto; text-align: left; }
+    .stat-col:not(:last-child)::after { display: none; }
+    
+    .desktop-only { display: none; }
+}
