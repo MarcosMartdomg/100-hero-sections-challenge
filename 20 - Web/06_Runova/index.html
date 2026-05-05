@@ -1,163 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUNOVA - Sports Club</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Runova - Tu pasión, nuestras instalaciones</title>
+    <meta name="description"
+        content="Descubre Runova, tu centro deportivo de confianza para pádel, natación, baloncesto y más.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">RUNOVA</a>
-            <nav class="nav-links">
-                <a href="#">INSTALACIONES</a>
-                <a href="#">CLASES</a>
-                <a href="#">EVENTOS</a>
-                <a href="#">CONTACTO</a>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="Runova Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Membership</a></li>
+                    <li><a href="#">Clubs</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
             </nav>
+            <div class="header-actions">
+                <div class="search-circle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <a href="#" class="btn btn-white btn-join">Join a Sport <span class="arrow-circle">→</span></a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    <span>SPORTS</span>
-                    <span>CLUB</span>
-                    <span>PASSION</span>
-                </h1>
+    <main>
+        <section id="hero">
+            <div class="hero-bg">
+                <img src="./assets/hero/landingimage.png" alt="Badminton Background">
             </div>
-            <div class="hero-card">
-                <div class="card-date">12 DIC - 14 DIC</div>
-                <div class="card-title">TORNEO</div>
-                <div class="card-subtitle">NAVIDAD</div>
-                <a href="#" class="card-link">Ver evento →</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="sports-grid">
-        <div class="sports-container">
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Padel</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1530549387789-4c1017266635?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Natación</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Baloncesto</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Fútbol</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1554068865-24cecd4e34b8?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Tenis</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1549719386-74edc354e1eb?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Boxeo</div>
-            </div>
-            <div class="sport-card">
-                <div class="sport-img" style="background-image: url('https://images.unsplash.com/photo-1626245027680-80a0880cf248?w=400&h=400&fit=crop')"></div>
-                <div class="sport-name">Badminton</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="cta-container">
-            <h2 class="cta-title">Tu pasión, nuestras instalaciones.</h2>
-            <a href="#" class="cta-btn">Reservar ahora</a>
-        </div>
-    </section>
-
-    <section class="video-banner">
-        <div class="video-container">
-            <div class="video-overlay"></div>
-            <button class="play-btn" aria-label="Reproducir video">
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                </svg>
-            </button>
-        </div>
-    </section>
-
-    <section class="experience-section">
-        <div class="experience-container">
-            <div class="experience-img" style="background-image: url('https://images.unsplash.com/photo-1461896836938-ffe607ba8211?w=800&h=600&fit=crop')"></div>
-            <div class="experience-content">
-                <h2 class="experience-title">Más que un partido, una experiencia compartida</h2>
-                <p class="experience-text">Vive la emoción del deporte en nuestras instalaciones de última generación. Desde partidos competitivos hasta clases divertidas, aquí encontrarás el espacio perfecto para tu pasión.</p>
-                <a href="#" class="experience-btn">Conocer más</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="testimonials">
-        <div class="testimonials-container">
-            <h2 class="testimonials-title">Nuestros clientes ya confían en nosotros</h2>
-            <div class="testimonials-slider">
-                <button class="testimonial-arrow left" aria-label="Anterior">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-                <div class="testimonial-card">
-                    <div class="testimonial-img" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop')"></div>
-                    <div class="testimonial-quote">"Las mejores instalaciones de la ciudad. El equipo es increíble y las clases son muy divertidas."</div>
-                    <div class="testimonial-author">- Carlos García</div>
-                    <div class="testimonial-rating">★★★★★</div>
+            <div class="hero-content">
+                <div class="hero-top-left">
+                    <div class="hero-testimonial">
+                        <div class="avatars">
+                            <img src="./assets/testimonials/persona1.png" alt="User 1">
+                            <img src="./assets/testimonials/persona2.png" alt="User 2">
+                            <img src="./assets/testimonials/persona3.png" alt="User 3">
+                        </div>
+                        <p>“The selection of technical gear is impressive, covering everything from trail running to
+                            high-intensity training. It’s rare to find a store where the employees are clearly athletes
+                            themselves. Prices are fair, and the atmosphere is super welcoming. I’ll definitely be
+                            coming back for my next pair of trainers!”</p>
+                    </div>
                 </div>
-                <button class="testimonial-arrow right" aria-label="Siguiente">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-            <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-main">
-                <div class="footer-slogan">
-                    <div class="footer-logo">RUNOVA</div>
-                    <p class="slogan-text">Donde la pasión encuentra su lugar</p>
+                <div class="hero-top-right">
+                    <div class="limited-card">
+                        <div class="limited-thumb">
+                            <img src="./assets/misc/campo1.png" alt="Limited Slots">
+                        </div>
+                        <div class="limited-text">
+                            <h3>LIMITED SLOTS<br>AVAILABLE</h3>
+                            <p>Reserva tu plaza ahora y no te quedes fuera de nuestras próximas ligas de invierno.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-nav">
-                    <h3>Navegación</h3>
-                    <a href="#">Inicio</a>
-                    <a href="#">Instalaciones</a>
-                    <a href="#">Clases</a>
-                    <a href="#">Eventos</a>
-                    <a href="#">Contacto</a>
-                </div>
-                <div class="footer-contact">
-                    <h3>Contacto</h3>
-                    <p>📍 Calle Principal 123, Madrid</p>
-                    <p>📞 +34 912 345 678</p>
-                    <p>✉️ info@runova.com</p>
+                <div class="hero-bottom-left">
+                    <h1 class="hero-title">
+                        SPORTS<br>PASSION
+                    </h1>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 RUNOVA. Todos los derechos reservados.</p>
+        </section>
+
+        <section id="sports">
+            <div class="container sports-wrapper">
+                <div class="sports-collage">
+                    <div class="sport-card" id="card-padel">
+                        <img src="./assets/sports/padel.png" alt="Padel">
+                        <div class="sport-label">Padel</div>
+                    </div>
+                    <div class="sport-card" id="card-natacion">
+                        <img src="./assets/sports/natacion.png" alt="Natación">
+                        <div class="sport-label">Natación</div>
+                    </div>
+                    <div class="sport-card" id="card-baloncesto">
+                        <img src="./assets/sports/baloncesto.png" alt="Baloncesto">
+                        <div class="sport-label">Baloncesto</div>
+                    </div>
+                    <div class="sport-card" id="card-tenis">
+                        <img src="./assets/sports/tenis.png" alt="Tenis">
+                        <div class="sport-label">Tenis</div>
+                    </div>
+                    <div class="sport-card" id="card-futbol">
+                        <img src="./assets/sports/futbol.png" alt="Fútbol">
+                        <div class="sport-label">Fútbol</div>
+                    </div>
+                    <div class="sport-card" id="card-boxeo">
+                        <img src="./assets/sports/boxeo.png" alt="Boxeo">
+                        <div class="sport-label">Boxeo</div>
+                    </div>
+                    <div class="sport-card" id="card-badminton">
+                        <img src="./assets/sports/badminton.png" alt="Bádminton">
+                        <div class="sport-label">Bádminton</div>
+                    </div>
+                </div>
+                <div class="sports-text">
+                    <h2>Tu pasión, nuestras instalaciones.</h2>
+                    <a href="#" class="btn btn-black">Consulta nuestros horarios</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="video">
+            <div class="container">
+                <div class="video-container">
+                    <img src="./assets/misc/padel1.png" alt="Outdoor Padel Court">
+                    <div class="video-overlay">
+                        <div class="play-btn">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"></path>
+                            </svg>
+                        </div>
+                        <p>Mira nuestro video y descubre la experiencia de nuestras clases de Padel</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container experience-wrapper">
+                <div class="exp-image">
+                    <img src="./assets/misc/padel2.png" alt="Group playing Padel">
+                </div>
+                <div class="exp-content">
+                    <h2>Más que un partido, una experiencia compartida</h2>
+                    <p>En Runova creemos en el deporte como una herramienta de unión. Nuestras instalaciones están
+                        diseñadas para fomentar la comunidad y el bienestar de todos nuestros socios.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <h2 class="section-title">Nuestros clientes ya confían en nosotros</h2>
+                <div class="testimonials-wrapper">
+                    <button class="arrow prev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="testimonials-carousel">
+                        <div class="testimonial-card side">
+                            <div class="card-body">
+                                <p>“Llevaba tiempo buscando un centro deportivo que no fuera solo un gimnasio al uso, y
+                                    en Runova encontré la calidad que buscaba como arquitecto: instalaciones modernas,
+                                    funcionales y muy bien cuidadas. Las clases de natación me han ayudado muchísimo con
+                                    mis problemas de espalda gracias a la profesionalidad de los monitores, que adaptan
+                                    cada ejercicio a tu nivel real. Es un lujo contar con un polideportivo de este nivel
+                                    tan cerca de casa, donde se nota que cada detalle está pensado para el usuario.”</p>
+                            </div>
+                            <div class="card-footer">
+                                <img src="./assets/testimonials/persona3.png" alt="Avatar" class="card-avatar">
+                                <div class="card-user">
+                                    <span class="card-name">Carlos Mendoza</span>
+                                    <span class="card-time">hace 2 días</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card center">
+                            <div class="card-body">
+                                <p>“Como diseñadora paso muchas horas sentada frente a una pantalla y necesitaba un
+                                    lugar que me obligara a moverme. Runova ha sido el descubrimiento del año; sus
+                                    pistas de pádel están siempre en perfectas condiciones y el sistema de reservas es
+                                    comodísimo. Además, lo que realmente marca la diferencia es el ambiente social que
+                                    se genera después de los partidos en sus zonas comunes. Es el lugar perfecto para
+                                    desconectar del estrés laboral y recargar energías con gente increíble.”</p>
+                            </div>
+                            <div class="card-footer">
+                                <img src="./assets/testimonials/persona2.png" alt="Avatar" class="card-avatar">
+                                <div class="card-user">
+                                    <span class="card-name">Fatima Sher</span>
+                                    <span class="card-time">hace 1 hora</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card side">
+                            <div class="card-body">
+                                <p>“Mi agenda es una locura y lo que más valoro de Runova es la enorme variedad de
+                                    disciplinas que ofrecen en un mismo recinto. Un día puedo liberar tensiones en la
+                                    sala de boxeo y al siguiente disfrutar de un partido de bádminton con amigos; esa
+                                    versatilidad es difícil de encontrar. El equipo humano es excepcional, siempre te
+                                    reciben con una sonrisa y están dispuestos a asesorarte en lo que necesites. Sin
+                                    duda, es la mejor inversión en salud y bienestar que he hecho en mucho tiempo.”</p>
+                            </div>
+                            <div class="card-footer">
+                                <img src="./assets/testimonials/persona1.png" alt="Avatar" class="card-avatar">
+                                <div class="card-user">
+                                    <span class="card-name">Elena Rodríguez</span>
+                                    <span class="card-time">hace 1 mes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="arrow next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+                <div class="carousel-progress">
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col footer-meta">
+                <h3 class="footer-cta">Tu meta<br>empieza aquí.</h3>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                            </path>
+                        </svg></a>
+                    <a href="#" class="social-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación rápida</h4>
+                <ul>
+                    <li><a href="#">Actividades</a></li>
+                    <li><a href="#">Horarios</a></li>
+                    <li><a href="#">Reserva de pistas</a></li>
+                    <li><a href="#">Tarifas</a></li>
+                    <li><a href="#">Escuela Infantil</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <p>Dirección: Av. del Deporte, 12, Madrid</p>
+                <p>Teléfono: 912 434 712</p>
+                <p>Email: info@runova.com</p>
+            </div>
+            <div class="footer-col footer-brand">
+                <div class="footer-logo">
+                    <img src="./assets/logo.png" alt="Runova Logo">
+                </div>
+                <p class="copyright">© RUNOVA.tm All Rights Reserved</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
