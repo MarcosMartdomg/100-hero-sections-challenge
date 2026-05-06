@@ -54,8 +54,10 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="hero-bg-wrapper">
-                <img src="assets/landing.png" alt="Logistics Background" class="hero-bg">
+            <div class="hero-bg-wrapper" id="hero-slider">
+                <img src="assets/landing.png" alt="Logistics Background" class="hero-bg active">
+                <img src="assets/hero-slide-2.jpg" alt="Logistics Cargo Ship" class="hero-bg">
+                <img src="assets/hero-slide-3.jpg" alt="Logistics Warehouse" class="hero-bg">
                 <div class="hero-overlay"></div>
             </div>
             <div class="hero-inner">
@@ -74,14 +76,14 @@
                     </div>
                 </div>
 
-                <button class="hero-next-arrow">
+                <button class="hero-next-arrow" id="next-slide">
                     <i data-lucide="arrow-right" style="width: 24px; height: 24px;"></i>
                 </button>
 
                 <div class="hero-pagination">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
                 </div>
 
                 <div class="hero-discover-bottom">
@@ -247,6 +249,50 @@
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
+
+        // Hero Slider Logic
+        const slides = document.querySelectorAll('.hero-bg');
+        const dots = document.querySelectorAll('.dot');
+        const nextBtn = document.getElementById('next-slide');
+        let activeIndex = 0;
+
+        function updateSlider(index) {
+            // Update slides
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                } else {
+                    slide.classList.remove('active');
+                }
+            });
+
+            // Update dots
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+
+            activeIndex = index;
+        }
+
+        function nextSlide() {
+            let nextIndex = (activeIndex + 1) % slides.length;
+            updateSlider(nextIndex);
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+        }
+
+        dots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const index = parseInt(dot.getAttribute('data-index'));
+                updateSlider(index);
+            });
+        });
     </script>
 </body>
 
