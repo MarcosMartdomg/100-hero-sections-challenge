@@ -179,69 +179,78 @@ img {
 
 /* --- 3. HERO SECTION --- */
 .hero {
-    height: calc(100vh - 32px - 86px - 76px);
+    min-height: calc(100vh - 32px - 86px - 76px);
+    height: calc(100vh - 194px);
     min-height: 520px;
     position: relative;
     overflow: hidden;
     background: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-family: 'Krona One', sans-serif;
+    font-size: clamp(130px, 17vw, 250px);
+    font-weight: 400;
+    line-height: 0.82;
+    letter-spacing: 0.02em;
+    color: #000;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: center;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    white-space: nowrap;
+}
+
+.hero-shoe {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: clamp(840px, 80vw, 1280px);
+    max-width: none;
+    pointer-events: none;
+    filter: drop-shadow(0 50px 100px rgba(0,0,0,0.15));
 }
 
 .hero-content {
     position: absolute;
-    left: clamp(80px, 11vw, 180px);
-    top: 12%;
-    z-index: 1;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
 }
 
 .hero-kicker {
+    position: absolute;
+    top: clamp(20px, 4.5vh, 40px);
+    left: max(var(--spacing-md), calc(50% - (var(--container-width) / 2) + var(--spacing-md)));
     display: flex;
     align-items: center;
-    gap: 14px;
-    font-size: clamp(28px, 3vw, 42px);
+    gap: clamp(10px, 1.5vw, 14px);
+    font-size: clamp(22px, 2.5vw, 42px);
     font-weight: 800;
     color: #000;
-    margin-bottom: 34px;
 }
 
 .kicker-pill {
-    width: 74px;
-    height: 28px;
+    width: clamp(50px, 7vw, 74px);
+    height: clamp(18px, 2.5vw, 28px);
     border-radius: 999px;
     background: #d9d9d9;
     overflow: hidden;
 }
 
-.hero-title {
-    font-family: 'Krona One', sans-serif;
-    font-size: clamp(110px, 16vw, 275px);
-    font-weight: 400;
-    line-height: 0.85;
-    letter-spacing: 0.10em;
-    color: #000;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-    text-transform: uppercase;
-}
-
-.hero-shoe {
-    position: absolute;
-    z-index: 3;
-    left: 7%;
-    right: auto;
-    bottom: 8%;
-    width: clamp(900px, 86vw, 1450px);
-    max-width: none;
-    pointer-events: none;
-    filter: drop-shadow(0 50px 100px rgba(0,0,0,0.15));
-    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.hero:hover .hero-shoe {
-    transform: scale(1.02) rotate(-2deg);
-}
+/* Hover removed */
 
 /* --- 4. FEATURES STRIP --- */
 .features-strip {
@@ -292,52 +301,63 @@ img {
     padding: var(--spacing-xl) 0;
 }
 
-.section-title {
-    font-size: 2.5rem;
-    font-weight: 900;
-    text-align: center;
+.collections .section-title {
+    text-align: left;
+    text-transform: none;
+    font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: var(--spacing-lg);
-    text-transform: uppercase;
 }
 
 .collections-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-sm);
+    gap: var(--spacing-lg);
 }
 
 .collection-card {
     position: relative;
     cursor: pointer;
-    overflow: hidden;
+    background: #fff;
 }
 
 .collection-card__image {
-    aspect-ratio: 4 / 5;
-    background-color: var(--color-gray-light);
+    aspect-ratio: 1 / 1;
+    background-color: #fff;
     transition: var(--transition-slow);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    padding: var(--spacing-md);
+}
+
+.collection-card__image--special {
+    transform: scale(1.1);
 }
 
 .collection-card__image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .collection-card:hover .collection-card__image {
-    transform: scale(1.05);
+    transform: translateY(-10px);
+}
+
+.collection-card__info {
+    margin-top: var(--spacing-md);
+    padding-left: 15px;
+    border-left: 3px solid var(--color-black);
 }
 
 .collection-card__label {
     display: block;
-    margin-top: var(--spacing-sm);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.125rem;
+    font-weight: 800;
+    text-transform: none;
+    font-size: 1.625rem;
+    color: var(--color-black);
+    line-height: 1;
 }
 
 /* --- 6. PROMO GRID --- */
@@ -490,27 +510,49 @@ img {
         display: none;
     }
     
+    .hero {
+        min-height: auto;
+        height: auto;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
     .hero-content {
         position: relative;
         left: 0;
         top: 0;
-        padding: var(--spacing-md);
+        transform: none;
         text-align: center;
+        width: 100%;
+    }
+    
+    .hero-kicker {
+        position: relative;
+        top: auto;
+        left: auto;
+        justify-content: center;
+        margin-bottom: var(--spacing-md);
     }
     
     .hero-title {
-        font-size: clamp(4rem, 15vw, 8rem);
-        letter-spacing: 0.05em;
+        font-size: clamp(80px, 18vw, 180px);
+        letter-spacing: 0.02em;
     }
     
     .hero-shoe {
         position: relative;
         left: 0;
-        bottom: 0;
-        width: 100%;
+        top: 0;
+        transform: none;
+        width: clamp(300px, 85vw, 900px);
         margin-top: var(--spacing-md);
-        transform: rotate(0);
     }
+    
+    /* Hover removed */
 }
 
 @media (max-width: 768px) {
@@ -532,20 +574,21 @@ img {
         grid-template-columns: 1fr;
     }
     
-    .hero-content {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .hero-shoe {
-        display: block;
-        width: 120%;
-        left: -10%;
+    .hero {
+        padding: var(--spacing-md);
     }
     
     .hero-title {
-        font-size: 4rem;
+        font-size: clamp(60px, 15vw, 100px);
     }
+    
+    .hero-shoe {
+        width: clamp(250px, 100vw, 500px);
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    
+    /* Hover removed */
     
     .footer__nav {
         flex-direction: column;
