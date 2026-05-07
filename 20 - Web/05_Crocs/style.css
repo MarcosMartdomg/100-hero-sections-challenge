@@ -305,13 +305,13 @@ img {
     text-align: left;
     text-transform: none;
     font-size: clamp(2rem, 4vw, 3rem);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 2.5rem;
 }
 
 .collections-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--spacing-lg);
+    gap: 2rem;
 }
 
 .collection-card {
@@ -328,11 +328,11 @@ img {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: var(--spacing-md);
+    padding: 0;
 }
 
 .collection-card__image--special {
-    transform: scale(1.1);
+    /* Scale removed for uniformity */
 }
 
 .collection-card__image img {
@@ -342,20 +342,22 @@ img {
 }
 
 .collection-card:hover .collection-card__image {
-    transform: translateY(-10px);
+    /* Hover effect removed for static look */
 }
 
 .collection-card__info {
-    margin-top: var(--spacing-md);
-    padding-left: 15px;
-    border-left: 3px solid var(--color-black);
+    margin-top: 1rem;
+    padding: 0.25rem 0 0.25rem 20px;
+    border-left: 2px solid var(--color-black);
+    display: flex;
+    align-items: center;
 }
 
 .collection-card__label {
     display: block;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: none;
-    font-size: 1.625rem;
+    font-size: 1.5rem;
     color: var(--color-black);
     line-height: 1;
 }
@@ -416,7 +418,7 @@ img {
 }
 
 .collab-item {
-    text-align: center;
+    text-align: left;
 }
 
 .collab-item__image {
@@ -432,10 +434,19 @@ img {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
+.collab-item__info {
+    padding: 0.25rem 0 0.25rem 20px;
+    border-left: 2px solid var(--color-black);
+    display: flex;
+    align-items: center;
+}
+
 .collab-item__name {
-    font-weight: 900;
+    font-weight: 600;
     font-size: 1.5rem;
-    text-transform: uppercase;
+    text-transform: none;
+    color: var(--color-black);
+    line-height: 1;
 }
 
 .collabs__action {
