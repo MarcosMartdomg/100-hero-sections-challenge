@@ -304,7 +304,8 @@ img {
 .collections .section-title {
     text-align: left;
     text-transform: none;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
     margin-bottom: 2.5rem;
 }
 
@@ -364,7 +365,7 @@ img {
 
 /* --- 6. PROMO GRID --- */
 .promo-grid {
-    padding-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-lg);
 }
 
 .promo-grid__row {
@@ -386,13 +387,20 @@ img {
 
 .promo-card__image {
     width: 100%;
-    height: 500px;
-    background-color: var(--color-gray-medium);
+    height: 100%;
+    background-color: var(--color-gray-light);
     transition: var(--transition-slow);
 }
 
+.promo-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .promo-card--full .promo-card__image {
-    height: 600px;
+    height: 420px;
 }
 
 .promo-card:hover .promo-card__image {
@@ -407,14 +415,22 @@ img {
 
 /* --- 7. SPECIAL COLLABS --- */
 .collabs {
-    padding-bottom: var(--spacing-xl);
+    padding: 4rem 0;
+}
+
+.collabs .section-title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 2.5rem;
+    text-transform: none;
 }
 
 .collabs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: 2rem;
 }
 
 .collab-item {
@@ -422,16 +438,26 @@ img {
 }
 
 .collab-item__image {
-    aspect-ratio: 1;
-    background-color: var(--color-gray-light);
-    border-radius: 50%;
-    margin-bottom: var(--spacing-md);
+    aspect-ratio: 1.2 / 1;
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 1.5rem;
     transition: var(--transition-base);
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.collab-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .collab-item:hover .collab-item__image {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* Hover effects removed for clean look */
 }
 
 .collab-item__info {
@@ -451,68 +477,88 @@ img {
 
 .collabs__action {
     text-align: center;
+    margin-top: 3rem;
 }
 
 /* --- 8. FOOTER --- */
 .footer {
-    background-color: var(--color-black);
+    background-color: #000;
     color: var(--color-white);
-    padding: var(--spacing-xl) 0 var(--spacing-md);
+    padding: 3rem 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.footer__logo {
-    font-size: 3rem;
-    font-weight: 900;
-    margin-bottom: var(--spacing-lg);
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0 3rem;
 }
 
-.footer__logo-img {
-    filter: invert(1);
+.footer-logo {
+    margin-bottom: 0;
 }
 
-.footer__nav {
+.footer-logo img {
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-nav {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: clamp(1.5rem, 3vw, 3rem);
+    margin-bottom: 2.5rem;
 }
 
-.footer__nav a {
+.footer-nav a {
+    color: #fff;
     text-transform: uppercase;
-    font-weight: 700;
     font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
 }
 
-.footer__nav a:hover {
+.footer-nav a:hover {
     opacity: 0.6;
 }
 
-.footer__socials {
+.footer-social {
     display: flex;
     justify-content: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xl);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
-    background-color: rgba(255,255,255,0.1);
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    cursor: pointer;
-    transition: var(--transition-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: rgba(255,255,255,0.3);
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
 }
 
-.footer__bottom {
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: var(--spacing-md);
+.footer-copyright {
     font-size: 0.75rem;
-    opacity: 0.5;
+    color: #888;
+    margin: 0;
 }
 
 /* --- Responsive --- */
@@ -601,8 +647,8 @@ img {
     
     /* Hover removed */
     
-    .footer__nav {
+    .footer-nav {
         flex-direction: column;
-        gap: var(--spacing-sm);
+        gap: 1.5rem;
     }
 }
