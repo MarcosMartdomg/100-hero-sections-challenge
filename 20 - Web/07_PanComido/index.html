@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pan Comido - Panadería Artesanal</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo-link">
+        <img src="images/logo.png" alt="Pan Comido" class="logo-img">
+      </a>
+      
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li>
+            <a href="#">Sweet selection <span class="dropdown-arrow">▾</span></a>
+          </li>
+          <li>
+            <a href="#">Breads <span class="dropdown-arrow">▾</span></a>
+          </li>
+          <li><a href="#about">About Us</a></li>
+          <li>
+            <a href="#">Contact for orders <span class="dropdown-arrow">▾</span></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#order" class="btn-order">Order Now</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">Freshly baked,<br>daily loved.</h1>
+        <p class="hero-desc">
+          At Pan Comido, we craft honest bread using traditional methods and simple ingredients. 
+          From crusty sourdoughs to golden pastries, every loaf is handmade daily with passion and care, 
+          and delivered straight from our ovens to your table.
+        </p>
+        <div class="hero-buttons">
+          <a href="#productos" class="btn-primary">Watch Our Selection</a>
+          <a href="#contact" class="btn-secondary">CONTACT</a>
+        </div>
+      </div>
+      
+      <a href="#productos" class="explore-badge">
+        <span>Explore our selection</span>
+        <svg class="arrow-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 17L17 7M17 7H7M17 7V17"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- PRODUCT SELECTION SECTION -->
+  <section id="productos" class="products-section">
+    <div class="products-container">
+      <div class="section-title-wrap">
+        <h2>Nuestra selección de Productos</h2>
+        <div class="title-underline"></div>
+      </div>
+
+      <div class="products-grid">
+        <!-- Product 1: Chapatas -->
+        <div class="product-card">
+          <span class="badge-novedad">Novedad</span>
+          <div class="card-img-wrap">
+            <img src="images/pan1.png" alt="Chapatas artesanas">
+          </div>
+          <div class="card-overlay">
+            <span class="product-title">Chapatas</span>
+          </div>
+        </div>
+
+        <!-- Product 2: Baguettes -->
+        <div class="product-card">
+          <div class="card-img-wrap">
+            <img src="images/pan2.png" alt="Baguettes recién horneadas">
+          </div>
+          <div class="card-overlay">
+            <span class="product-title">Baguettes</span>
+          </div>
+        </div>
+
+        <!-- Product 3: Rústico -->
+        <div class="product-card">
+          <div class="card-img-wrap">
+            <img src="images/pan3.png" alt="Pan Rústico">
+          </div>
+          <div class="card-overlay">
+            <span class="product-title">Rústico</span>
+          </div>
+        </div>
+
+        <!-- Product 4: Masa Madre -->
+        <div class="product-card">
+          <div class="card-img-wrap">
+            <img src="images/pan4.png" alt="Pan de Masa Madre">
+          </div>
+          <div class="card-overlay">
+            <span class="product-title">Masa Madre</span>
+          </div>
+        </div>
+
+        <!-- Product 5: Integral -->
+        <div class="product-card">
+          <div class="card-img-wrap">
+            <img src="images/pan5.png" alt="Pan Integral con semillas">
+          </div>
+          <div class="card-overlay">
+            <span class="product-title">Integral</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOME DELIVERY BANNER SECTION -->
+  <section class="delivery-banner">
+    <div class="banner-container">
+      <div class="banner-content">
+        <h2>La mejor selección<br>directa a casa</h2>
+        <a href="#" class="banner-link">
+          <span>Ver más</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / CRAFT SECTION -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-text-col">
+        <div class="heading-with-line">
+          <div class="accent-line"></div>
+          <h2>Frescura Diaria en Cada<br>Horneado</h2>
+        </div>
+        <p class="about-description">
+          En nuestro obrador, entendemos que el buen pan no admite atajos. Por eso, cada pieza que ves nacer 
+          de nuestras manos es el resultado de un proceso lento y cuidadoso que comienza con la selección de trigos 
+          seleccionados y masas madre cultivadas con mimo. No hay nada como el aroma del pan recién horneado 
+          inundando tu hogar por las mañanas; es esa fragancia la que nos impulsa a trabajar a diario con harinas 
+          de alta calidad e ingredientes 100% naturales. Creemos firmemente que la salud y el sabor van de la mano, 
+          por lo que desterramos aditivos y conservantes para ofrecerte un producto honesto, nutritivo y profundamente auténtico.
+        </p>
+      </div>
+
+      <div class="about-img-col">
+        <div class="baker-image-card">
+          <img src="images/imagen1.png" alt="Maestro panadero trabajando en el obrador con pan recién salido del horno">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="main-footer">
+    <div class="footer-container">
+      <div class="footer-logo-wrap">
+        <a href="#">
+          <img src="images/logo.png" alt="Pan Comido Logo" class="footer-logo">
+        </a>
+      </div>
+
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sweet selection</a></li>
+          <li><a href="#">Breads</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#">Contact for orders</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-bottom">
+        <div class="social-links">
+          <!-- Instagram Icon -->
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <!-- Twitter / X Icon -->
+          <a href="#" aria-label="Twitter / X" class="social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <!-- Facebook Icon -->
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.374 14.5 5 15.5 5H18V0h-3.808C10.592 0 9 1.583 9 4.615V8z"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="copyright-text">
+          &copy; Pan Comido. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
